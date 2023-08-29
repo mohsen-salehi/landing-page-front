@@ -9,7 +9,7 @@ export const StoreContext = createContext([])
 const initialState = {
     mobile: [],
     token: CacheProvider.get("token") ? CacheProvider.get("token")?.value : '',
-    wheel: []
+    wheel: [],
 }
 
 

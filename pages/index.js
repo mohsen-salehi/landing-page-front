@@ -1,15 +1,11 @@
 import Curtains from "@/components/Curtains";
+import HomeComponent from "@/components/home/homeComponent";
 
 export default function Home() {
 
     return (
-         <Authorization>
+         // <Authorization>
             <HomeComponent/>
-         </Authorization>
+         // </Authorization>
     )
 }
-import HomeComponent from "@/components/home/homeComponent";
-
-
-import Authorization from "@/middleware/authorization";
-import React from "react";

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import OtpComponent from "@/components/login/otpComponent";
 import RequestComponent from "@/components/login/requestComponent";
 
-function Index() {
+function Login() {
     const [status, setStatus] = useState("request")
     return (
         <div>
@@ -11,4 +11,4 @@ function Index() {
         </div>);
 }
 
-export default Index;
+export default Login;

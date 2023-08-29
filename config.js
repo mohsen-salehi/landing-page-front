@@ -6,7 +6,7 @@ const config = {
         url: "http://griffin.local",
     },
     test: {
-        base_url: 'https://landing.elanzacom.ir/api/',
+        base_url: 'https://log.elanzacom.ir/api/',
         url: "https://elanzacom.ir",
     },
     production: {

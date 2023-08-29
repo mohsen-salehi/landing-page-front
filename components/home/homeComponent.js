@@ -13,10 +13,10 @@ function HomeComponent() {
     const [loading , setLoading] = useState(false)
     const [clickable , setClickable] = useState(false)
     const [hide , setHide] = useState(true)
+    const  {wheelState, wheelDispatch} = useContext(StoreContext)
     const clickHandler = () => {
         setClickable(true)
     }
-    const {wheelState , wheelDispatch} = useContext(StoreContext)
     useEffect(() => {
         wheelDispatch({type : "GET_INDEX"})
     }, []);
@@ -34,7 +34,6 @@ function HomeComponent() {
                 <div className="w-full  flex flex-wrap justify-center">
                     <div className="p-[10px]  -rotate-90 !rounded-full flex flex-wrap  relative main-wheel" >
                         <div className="z-10 rounded-full">
-
                             <Wheels wheelState={wheelState} clickable={clickable} setClickable={setClickable} />
                         </div>
                         <Image src={wheel} alt="wheel" width={285} height={285} className="z-0 center-position overflow-hidden rounded-full"/>

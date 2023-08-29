@@ -3,7 +3,6 @@ import {Form, Formik} from "formik";
 import {OtpValidation} from "@/schema";
 import InputValidation from "@/components/public/inputs/inputValidation";
 import {StoreContext} from "@/store";
-import {router} from "next/client";
 import {useRouter} from "next/router";
 
 function OtpComponent() {
@@ -15,11 +14,11 @@ function OtpComponent() {
     const onSubmit = ({token} , action) => {
         tokenDispatch({type : "GET_TOKEN" , payload : {token}})
         setTimeout(() => {
-            router.push("/")
             action.resetForm()
             action.setSubmitting(false)
         } , 400)
     }
+
     return (
         <section className="min-h-screen min-w-full flex flex-wrap justify-center items-center">
             <Formik initialValues={initialValue} validationSchema={OtpValidation} onSubmit={onSubmit}>
